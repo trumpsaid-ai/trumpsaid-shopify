@@ -1,18 +1,17 @@
 {
-  "name": "starter-theme",
-  "version": "1.0.0-alpha.1",
+  "name": "trumpsaid-shopify",
+  "version": "1.0",
   "private": true,
-  "author": "Shopify Inc.",
-  "description": "An opinionated, Slate compatible, starting point for developing Shopify themes.",
+  "author": "Peter Kaazes",
   "keywords": [
     "shopify",
-    "theme"
+    "theme",
+    "trumpsaid.ai"
   ],
-  "bugs": "https://github.com/Shopify/starter-theme/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shopify/starter-theme.git"
+    "url": "https://github.com/trumpsaid-ai/trumpsaid-ai.git"
   },
   "devDependencies": {
     "@shopify/slate-tools": "1.0.0-beta.8",
@@ -29,6 +28,7 @@
     "@shopify/theme-rte": "^1.0.0-alpha.7",
     "@shopify/theme-sections": "^1.1.0",
     "@shopify/theme-variants": "^1.0.0-alpha.8",
+    "bootstrap": "^4.1.3",
     "jquery": "^3.2.1",
     "lazysizes": "^4.1.1",
     "lodash-es": "^4.17.4",
