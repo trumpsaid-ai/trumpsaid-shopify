@@ -1,0 +1,31 @@
+@import "./vendor/mdb/variables";
+@import "./vendor/mdb/colors";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./vendor/mdb/mdb";
+@import "./static/scss/regular.scss";
+@import "./static/scss/brands.scss";
+@import "./static/scss/solid.scss";
+@import "./static/scss/fontawesome.scss";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+nav {
+  .navbar-brand {
+    margin-bottom: -18px;
+    z-index: 9999;
+  }
+  .avatar {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid $white;
+    height: 40px;
+    width: 40px;
+    img {
+      width: 40px;
+    }
+  }
+}

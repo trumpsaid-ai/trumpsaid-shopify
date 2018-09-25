@@ -1,39 +1,41 @@
 @charset 'UTF-8';
 
+@import "./main.scss";
+
 /**
- * [replace with theme name] | Built with Slate
+ * Trump Said Shop, Built with Slate
  */
-@import '~normalize.css/normalize';
+@import "~normalize.css/normalize";
 
 // Settings
-@import './variables';
+@import "./slate-variables";
 
 // Tools
-@import './tools/mixins';
-@import './tools/functions';
+@import "./tools/mixins";
+@import "./tools/functions";
 
 // Core
-@import './core/forms';
-@import './core/helpers';
-@import './core/layout';
-@import './core/media';
-@import './core/responsive-tables';
-@import './core/rte';
-@import './core/typography';
+@import "./core/forms";
+@import "./core/helpers";
+@import "./core/layout";
+@import "./core/media";
+@import "./core/responsive-tables";
+@import "./core/rte";
+@import "./core/typography";
 
 // Components
-@import './components/buttons';
-@import './components/hero-banner';
-@import './components/icons';
-@import './components/placeholders';
-@import './components/responsive-images';
+@import "./components/buttons";
+@import "./components/hero-banner";
+@import "./components/icons";
+@import "./components/placeholders";
+@import "./components/responsive-images";
 
 // Sections
-@import './sections/blog-posts';
-@import './sections/collection-list';
-@import './sections/featured-collection';
-@import './sections/image-with-text';
+@import "./sections/blog-posts";
+@import "./sections/collection-list";
+@import "./sections/featured-collection";
+@import "./sections/image-with-text";
 
 // Templates
-@import './templates/gift_card';
-@import './templates/product';
+@import "./templates/gift_card";
+@import "./templates/product";
