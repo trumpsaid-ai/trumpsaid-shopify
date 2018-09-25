@@ -7,4 +7,3 @@ cache:
     - node_modules
 script:
   - NODE_ENV=test yarn build
-  - yarn lint
