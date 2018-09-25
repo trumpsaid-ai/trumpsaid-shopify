@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/trumpsaidai/trumpsaid-shopify.svg?branch=master)](https://travis-ci.org/trumpsaidai/trumpsaid-shopify)
+[![Build Status](https://api.travis-ci.org/trumpsaid-ai/trumpsaid-shopify.svg?branch=master)](https://travis-ci.org/trumpsaidai/trumpsaid-shopify)
 
 # Starter Theme
 
