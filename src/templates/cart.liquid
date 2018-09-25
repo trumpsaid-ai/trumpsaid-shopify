@@ -101,6 +101,12 @@
     {% if cart.total_discounts > 0 %}
       <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
     {% endif %}
+    <div id="vesey_charity_embed_div" style="visibility: hidden;" data-currency="{{ shop.money_format }}" data-cart-total="{{ cart.total_price | money_without_currency | remove: '.00' }}">
+        <input type="checkbox" id="vesey_charity_embed_checkbox" checked="checked" />
+        <label for="vesey_charity_embed_checkbox" id="vesey_charity_embed_label">Round Up for Charity?</label>
+        <span id="vesey_charity_embed_tooltip"></span>
+        <span id="vesey_charity_embed_round_difference"></span>
+    </div>
     <p>{{ 'cart.general.shipping_at_checkout' | t }}</p>
     <input type="submit" name="update" value="{{ 'cart.general.update' | t }}">
     <input type="submit" name="checkout" class="button" value="{{ 'cart.general.checkout' | t }}">
