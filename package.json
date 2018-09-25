@@ -37,7 +37,7 @@
   "scripts": {
     "start": "slate-tools start",
     "watch": "slate-tools start --skipFirstDeploy",
-    "build": "slate-tools build",
+    "build": "slate-tools build --skipPrompts",
     "deploy": "slate-tools build && slate-tools deploy",
     "zip": "slate-tools build && slate-tools zip",
     "lint": "slate-tools lint",
