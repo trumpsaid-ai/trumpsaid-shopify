@@ -2,10 +2,10 @@
 @import "./vendor/mdb/colors";
 @import "~bootstrap/scss/bootstrap.scss";
 @import "./vendor/mdb/mdb";
-@import "./static/scss/regular.scss";
-@import "./static/scss/brands.scss";
-@import "./static/scss/solid.scss";
-@import "./static/scss/fontawesome.scss";
+@import "./vendor/font-awesome/regular.scss";
+@import "./vendor/font-awesome/brands.scss";
+@import "./vendor/font-awesome/solid.scss";
+@import "./vendor/font-awesome/fontawesome.scss";
 
 html {
   position: relative;
@@ -13,9 +13,15 @@ html {
 }
 
 nav {
+  .navbar {
+    padding: 0.5em 1em;
+  }
   .navbar-brand {
     margin-bottom: -18px;
     z-index: 9999;
+    img {
+      height: 80px;
+    }
   }
   .avatar {
     -webkit-border-radius: 50%;

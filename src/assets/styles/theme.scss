@@ -1,7 +1,5 @@
 @charset 'UTF-8';
 
-@import "./main.scss";
-
 /**
  * Trump Said Shop, Built with Slate
  */
@@ -39,3 +37,5 @@
 // Templates
 @import "./templates/gift_card";
 @import "./templates/product";
+
+@import "./main.scss";

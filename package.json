@@ -38,7 +38,8 @@
     "lazysizes": "^4.1.1",
     "lodash-es": "^4.17.4",
     "mdbootstrap": "^4.5.11",
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "popper": "^1.0.1"
   },
   "scripts": {
     "start": "slate-tools start",

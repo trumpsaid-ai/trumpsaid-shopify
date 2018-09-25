@@ -34,7 +34,7 @@
   {% include 'social-meta-tags' %}
   {% include 'style-tags', layout: 'theme' %}
   {% include 'css-variables' %}
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', '');
 
@@ -52,7 +52,6 @@
 
   {{ content_for_header }}
 </head>
-
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>

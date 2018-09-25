@@ -11,14 +11,16 @@ import '../../styles/theme.scss.liquid';
 import {focusHash, bindInPageLinks} from '@shopify/theme-a11y';
 import {cookiesEnabled} from '@shopify/theme-cart';
 
+import 'bootstrap/dist/js/bootstrap.bundle';
+
 // Common a11y fixes
-focusHash();
-bindInPageLinks();
+focusHash ();
+bindInPageLinks ();
 
 // Apply a specific class to the html element for browser support of cookies.
-if (cookiesEnabled()) {
-  document.documentElement.className = document.documentElement.className.replace(
+if (cookiesEnabled ()) {
+  document.documentElement.className = document.documentElement.className.replace (
     'supports-no-cookies',
-    'supports-cookies',
+    'supports-cookies'
   );
 }
