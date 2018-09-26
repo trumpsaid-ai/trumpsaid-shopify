@@ -53,16 +53,52 @@
   {{ content_for_header }}
 </head>
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
-
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
-
   {% section 'header' %}
-
   <main role="main" id="MainContent">
     {{ content_for_layout }}
+    <div class="banana-notification banana-socialProofPopup {% if popout %}banana-popout banana-{{ popout_position }}{% endif %} {% if picture_mode == 'none' or display_picture_html == nil %}banana-no-picture{% endif %}">
+    {%- if picture_mode != 'none' and display_picture_html != nil -%}
+      <span class="banana-profile-container banana-profile-type-{{ picture_mode }}">
+        {%- if product.url -%}<a href="{{ product.url }}" class="banana-product-image-link" target="{{ product.name }}">{%- endif -%}
+          {{ display_picture_html }}
+        {%- if product.url -%}</a>{%- endif -%}
+      </span>
+    {%- endif -%}
+    <span class="banana-notification-text">
+      {%- if customer_name_display != 'Someone' and show_name %}
+        <span class="banana-customer-name">{{ customer_name_display }}</span>
+      {% else %}
+        Someone
+      {% endif %}
+      {% if location_string %}
+        <span class="banana-from">from <span class="banana-location">{{ location_string }}</span></span>
+      {% endif %}
+      {% if seconds_ago < 1800 %}just {% endif %}
+      <span class="banana-action">
+        {% if action_type == 'customer_ordered_product' %}
+          ordered
+        {% else if action_type == 'customer_added_to_cart' %}
+          started buying
+        {% endif %}
+      </span>
+      <span class="banana-product-caption" data-max_product_name_length="{{ max_product_name_length }}">
+        {%- if product and product.name -%}
+          {%- if product.url -%}
+            <a href="{{ product.url }}" target="{{ product.name }}" class="banana-product-link">
+        {%- endif -%}
+        {{ product.name }}
+        {%- if product.url -%}</a>{%- endif -%}
+        {%- else -%}
+          a product
+        {%- endif -%}
+      </span>!
+    <span class="banana-event-time-ago">{{ event_time }}</span>
+    <span class="banana-notification-countdown" data-seconds="5">5</span>
+    <span class="banana-notification-close"></span>
+  </span>
+</div>
   </main>
-
   {% section 'footer' %}
-
 </body>
 </html>

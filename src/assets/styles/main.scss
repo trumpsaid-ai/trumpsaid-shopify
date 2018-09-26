@@ -12,6 +12,42 @@ html {
   min-height: 100%;
 }
 
+.card {
+  .btn-action {
+    margin-top: -1rem !important;
+    margin-bottom: -1rem !important;
+  }
+  .btn-floating {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin: 10px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    i {
+      display: inline-block;
+      width: inherit;
+      text-align: center;
+      color: #fff;
+      font-size: 1.25rem;
+      line-height: 47px;
+    }
+  }
+}
+
 nav {
   .navbar {
     padding: 0.5em 1em;
@@ -34,4 +70,8 @@ nav {
       width: 40px;
     }
   }
+}
+
+.c-pointer {
+  cursor: pointer;
 }
