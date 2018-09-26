@@ -34,9 +34,9 @@
                     <div class="d-flex flex-wrap flex-fill align-items-center">
                       {% for item in search.results %}
                         <div class="col-md-6 col-lg-4 mb-4">
-                          <div class="card">
+                          <div class="card z-depth-3">
                             <a href="{{ item.url | within: collection }}">
-                              <div class="view overlay white c-pointer">
+                              <div class="view overlay white c-pointer z-depth-1">
                                 {% assign featured_image = item.image | default: item.featured_image %}
                                 {% if featured_image != blank %}
                                   {{ featured_image | img_url: '350x350' | img_tag: item.title, 'mx-auto c-pointer' }}
@@ -48,7 +48,7 @@
                             </div>
                             <div class="rounded-bottom px-3 pt-3" style="background-color: #698897;">
                               <a href="{{ item.url | within: collection }}">
-                                <ul class="list-unstyled list-inline font-small">
+                                <ul class="list-unstyled list-inline font-small d-flex justify-content-between align-items-center">
                                   {% if item.object_type == 'product' %}
                                     {% if item.compare_at_price > item.price %}
                                       {% if item.price_varies %}
@@ -78,14 +78,21 @@
                                         </li>
                                       {% endif %}
                                     {% endif %}
-                                    {% unless item.available %}
-                                      <li class="list-inline-item pr-2 white-text">
-                                        {{ 'products.product.sold_out' | t }}
-                                      </li>
-                                    {% endunless %}
                                   {% else %}
                                     <li class="list-inline-item pr-2 white-text"></li>
                                   {% endif %}
+                                  <li class="list-inline-item">
+                                    {% if item.available != true %}
+                                      <button class="btn btn-elegant btn-sm" disabled>{{ 'products.product.sold_out' | t }}</button>
+                                    {% elsif item.has_only_default_variant %}
+                                      <form method="post" action="/cart/add">
+                                        <input name="id" value="{{ item.variants.first.id }}" type="hidden" />
+                                        <input name="add" value="Add to Cart" class="btn btn-elegant btn-sm" type="submit" />
+                                      </form>
+                                    {% else %}
+                                      <button class="btn btn-elegant btn-sm" href="{{ item.url }}">Details</button>
+                                    {% endif %}
+                                  </li>
                                 </ul>
                               </a>
                             </div>
